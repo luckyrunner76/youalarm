@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="place">
+        <item>냉장실</item>
+        <item>냉동실</item>
+        <item>실온</item>
+    </string-array>
+</resources>

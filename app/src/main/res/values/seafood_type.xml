@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="seafood_type">
+        <item>생선류</item>
+        <item>오징어</item>
+        <item>낙지</item>
+        <item>문어</item>
+        <item>새우</item>
+        <item>게</item>
+        <item>랍스터</item>
+        <item>전복</item>
+        <item>굴</item>
+        <item>조개류</item>
+    </string-array>
+</resources>

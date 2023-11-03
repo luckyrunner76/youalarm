@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--            공간 띄우기-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp">
+            </LinearLayout>
+
+            <!--            품목 입력하는 부분-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="품목"
+                    android:textSize="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/rg_line1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <RadioButton
+                            android:id="@+id/fruit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="과일" />
+
+                        <RadioButton
+                            android:id="@+id/vegetable"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="채소" />
+
+                        <RadioButton
+                            android:id="@+id/meat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="정육" />
+
+                    </RadioGroup>
+
+                    <RadioGroup
+                        android:id="@+id/rg_line2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <RadioButton
+                            android:id="@+id/seafood"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="해산물" />
+                        <RadioButton
+                            android:id="@+id/etc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="기타" />
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--            공간 띄우기-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp">
+            </LinearLayout>
+
+            <!--            상품명 입력하는 부분-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="상품명"
+                    android:textSize="20dp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/defalutText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="품목을 선택해주세요"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:visibility="visible"/>
+
+                    <Spinner
+                        android:id="@+id/fruitSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:visibility="invisible"
+                        />
+                    <!--                        android:visibility="invisible"-->
+
+                    <Spinner
+                        android:id="@+id/vegetableSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:visibility="invisible"/>
+
+                    <Spinner
+                        android:id="@+id/meatSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:visibility="invisible"/>
+
+                    <Spinner
+                        android:id="@+id/seafoodSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:visibility="invisible"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etcName"
+                        android:layout_centerHorizontal="true"
+                        android:privateImeOptions="defaultInputmode=korean"
+                        android:visibility="invisible"
+                        />
+
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <!--            공간 띄우기-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp">
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="개수"
+                    android:textSize="20dp" />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fCnt"
+                    android:layout_centerHorizontal="true"
+                    android:privateImeOptions="defaultInputmode=korean"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:contentDescription="개수를 입력하세요."/>
+
+            </LinearLayout>
+
+            <!--            공간 띄우기-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp">
+
+            </LinearLayout>
+
+            <!--            보관장소 입력하는 부분-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="98dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="보관장소"
+                    android:textSize="20dp" />
+
+                <Spinner
+                    android:id="@+id/freshspinner"
+                    android:layout_width="300dp"
+                    android:layout_height="45dp"
+                    android:background="#DFE2E8"
+                    />
+            </LinearLayout>
+
+            <!--            공간 띄우기-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"></LinearLayout>
+
+            <!--            등록일 입력하는 부분-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="등록일"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/fCreateDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:text="등록일을 선택하세요."
+                    android:textColor="@color/textColorSub"
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+
+            <!--            공간 띄우기-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"></LinearLayout>
+
+            <!--            소비기한 입력하는 부분-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="소비기한"
+                    android:textSize="20dp" />
+
+
+                <EditText
+                    android:id="@+id/fAlarm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:text="소비기한을 선택하세요."
+                    android:textColor="@color/textColorSub"
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+            <!--            공간 띄우기-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp">
+
+            </LinearLayout>
+
+            <!--            메모 입력하는 부분-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="98dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="메모"
+                    android:textSize="20dp" />
+
+
+                <EditText
+                    android:layout_width="300dp"
+                    android:layout_height="123dp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/memo_border"
+                    android:ems="10"
+                    android:hint="메모를 남겨보세요"
+                    android:textColorHint="@color/textColorSub"
+                    android:textSize="12sp"
+                    android:id="@+id/fMemo"
+                    android:layout_centerHorizontal="true"
+                    android:privateImeOptions="defaultInputmode=korean"/>
+
+            </LinearLayout>
+
+            <!--            공간 띄우기-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp">
+
+            </LinearLayout>
+
+            <!--            저장 버튼 부분-->
+            <android.widget.Button
+                android:id="@+id/fbutton"
+                android:background="@drawable/bg_btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="저장"
+                />
+
+            <!--            공간 띄우기-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

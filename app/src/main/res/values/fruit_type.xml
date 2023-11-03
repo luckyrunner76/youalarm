@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fruit_type">
+        <item>사과</item>
+        <item>배</item>
+        <item>감귤</item>
+        <item>수박</item>
+        <item>멜론</item>
+        <item>참외</item>
+        <item>토마토</item>
+        <item>딸기</item>
+        <item>블루베리</item>
+        <item>키위</item>
+        <item>복숭아</item>
+        <item>자두</item>
+        <item>포도</item>
+        <item>감</item>
+        <item>곶감</item>
+        <item>바나나</item>
+        <item>오렌지</item>
+        <item>자몽</item>
+        <item>레몬</item>
+    </string-array>
+</resources>
